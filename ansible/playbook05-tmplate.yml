@@ -1,0 +1,13 @@
+---
+
+- name: Koreks template playbook
+  hosts: planet-express
+  gather_facts: yes
+
+  tasks:
+  - name: Our template
+    template:
+      dest: ~ship.conf
+      src: ~/mycode/ansible/templates/ship.conf.j2
+
+
