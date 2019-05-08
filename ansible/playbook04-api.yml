@@ -17,7 +17,7 @@
   - name: you won!
     debug:
       msg: "congrats you won :)"
-    when: readfile:stdout == "1"
+    when: readfile.stdout == "1"
 
   - name: you LOST!
     debug:
