@@ -1,0 +1,15 @@
+- name: Koreks first playbook
+  hosts: localhost
+  
+  tasks:
+  - name: deploy software from aptitide repository
+    apt:
+      name: bastet ## install the software package baset
+      state: present ## we want the sotware to be INSTALLED
+    become: yes ## run in sudo mode (privledged)
+    register: results ## save the JSON that is sent back
+
+  - name: print to the screen our results variable
+    debug:
+      var: results 
+
